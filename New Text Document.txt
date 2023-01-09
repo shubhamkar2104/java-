@@ -1,0 +1,51 @@
+package gamerockpaperandseasor;
+import java.util.Scanner;
+import java.util.Random;
+public class game {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1 = seasor");
+        System.out.println("2 = rock");
+        System.out.println("3 = paper");
+        System.out.println("choose from above");
+
+        int a = sc.nextInt();
+        System.out.println(a);
+        Random r = new Random();
+        int upperbound =3;
+        int int_random = r.nextInt(upperbound);
+        System.out.println( int_random);
+        if (int_random == 0) {
+            System.out.println("Rock");
+        } else if (int_random == 1) {
+            System.out.println("paper");
+        } else if (int_random == 2) {
+            System.out.println("seasor");
+        }
+
+        if (int_random ==0 && a== 1) {
+            System.out.println("computer wins");
+        } else if (int_random ==0 && a== 2) {
+            System.out.println("Draw");
+        }else if (int_random ==0 && a== 3) {
+            System.out.println("You win!!!");
+        }else if (int_random ==1 && a== 1) {
+            System.out.println("You win");
+        } else if (int_random==1 && a==2) {
+            System.out.println("computer wins");
+        } else if (int_random==1 && a==3) {
+            System.out.println("draw");
+        } else if (int_random==2 && a==1) {
+            System.out.println("Draw");
+        } else if (int_random==2 && a==2) {
+            System.out.println("You win");
+        } else if (int_random==2 && a==3) {
+            System.out.println("computer wins");
+        }
+        else {
+            System.out.println("choose from above option only");
+        }
+    }
+}
+
+
